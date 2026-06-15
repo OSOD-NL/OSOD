@@ -1,0 +1,100 @@
+{
+  "osodVersion": "0.1",
+  "recordId": "55555555-5555-4555-8555-555555555555",
+  "recordType": "operationeleDuikregistratie",
+  "conformanceClaims": [
+    "S",
+    "R"
+  ],
+  "createdAt": "2026-06-10T14:00:00Z",
+  "sourceSystem": {
+    "name": "Voorbeeld",
+    "version": "0.1",
+    "exportedAt": "2026-06-08T12:00:00Z"
+  },
+  "context": {
+    "veiligheidsregio": "VR Demo",
+    "duikteam": "Team Demo",
+    "locatie": {
+      "omschrijving": "Oefenlocatie Demo"
+    },
+    "activiteitType": "oefening",
+    "oefencode": "BRW-BWD.02",
+    "omschrijving": "Fictieve oefendag met meerdere ondiepe duiken van dezelfde duiker"
+  },
+  "roles": {
+    "duikploegleider": {
+      "displayName": "DPL 1",
+      "localPersonId": "demo-dpl-1",
+      "role": "duikploegleider",
+      "scope": "A15"
+    },
+    "duikers": [
+      {
+        "displayName": "Duiker 1",
+        "localPersonId": "demo-duiker-1",
+        "role": "duiker",
+        "scope": "A15",
+        "isReserveduiker": false
+      }
+    ]
+  },
+  "dive": {
+    "datum": "2026-06-08",
+    "tijdIn": "13:40",
+    "tijdUit": "15:13",
+    "duiktijdMin": 93,
+    "totaleTijdOnderDrukMin": 93,
+    "maximaleDiepteWerkelijkM": 5.8,
+    "tabelDiepteM": 6,
+    "gevolgdSchema": {
+      "schemaType": "METERREGEL",
+      "naam": "6 meter-regel",
+      "bronId": "WOD-v2.0-11.5.1",
+      "versie": "2024-12-03"
+    },
+    "decompressieverloop": {
+      "type": "NO_DECO",
+      "stops": [],
+      "omschrijving": "Geen decompressiestop uitgevoerd."
+    },
+    "ademgas": "ademlucht",
+    "duiksysteem": "SCUBA",
+    "aardDuikarbeid": "oefening",
+    "aantalDuikers": 1,
+    "bijzondereSessies": []
+  },
+  "signoff": {
+    "status": "concept",
+    "duikploegleiderGetekend": false,
+    "werkgeverOfOpdrachtgeverGetekend": false
+  },
+  "calculation": {
+    "status": "RED",
+    "resultValid": false,
+    "engine": {
+      "name": "Demo DCIEM Engine",
+      "version": "0.1",
+      "tableSourceId": "IWOD-002-2019-2300",
+      "tableFingerprintSha256": "75e1bf9654d4f025b63dca6a3303244c4563960450086731cc8ef08b47648bed"
+    },
+    "inputEnvelope": {
+      "meterRuleM": 6,
+      "summedDiveTimeMin": 433,
+      "startRepetitiveFactor": 1.0,
+      "breathingGas": "ademlucht"
+    },
+    "outputs": {},
+    "blockingReasons": [
+      "BOTTOM_TIME_EXCEEDS_METER_RULE"
+    ],
+    "messages": [
+      "Opgetelde duiktijd van 433 minuten overschrijdt het 6-meterregelmaximum van 420 minuten (Werkinstructie WOD v2.0, par. 11.5.1)."
+    ]
+  },
+  "incidentReference": {
+    "hasIncidentRecord": false,
+    "referenceId": null,
+    "summary": null
+  }
+}

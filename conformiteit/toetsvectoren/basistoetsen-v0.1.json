@@ -1,0 +1,178 @@
+{
+  "osodVersion": "0.1",
+  "vectorSetId": "basistoetsen-v0.1",
+  "status": "publieke-conceptversie",
+  "notice": "Beperkte publieke basistoetsen. Geen volledige DCIEM/IWOD-tabelherpublicatie.",
+  "vectors": [
+    {
+      "id": "R-BASIS-001",
+      "type": "tabelopzoeking",
+      "description": "Eerste duik, 12 m, 30 min.",
+      "input": {
+        "breathingGas": "ademlucht",
+        "mddM": 12,
+        "bottomTimeMin": 30,
+        "firstDive": true
+      },
+      "expected": {
+        "status": "GREEN",
+        "repetitionGroup": "B",
+        "mustBlock": false
+      }
+    },
+    {
+      "id": "R-BASIS-002",
+      "type": "bronconflict_cel",
+      "description": "Bronconflictcel Tabel 4a: HG B, OI 2:00-2:59.",
+      "input": {
+        "repetitionGroup": "B",
+        "surfaceIntervalRange": "2:00-2:59"
+      },
+      "expected": {
+        "repetitiveFactor": 1.2,
+        "mustBlock": false
+      }
+    },
+    {
+      "id": "R-BASIS-003",
+      "type": "tabelopzoeking",
+      "description": "Herhalingsnultijd 12 m bij HF 1.3.",
+      "input": {
+        "mddM": 12,
+        "repetitiveFactor": 1.3
+      },
+      "expected": {
+        "repeatNoDecompressionLimitMin": 115,
+        "mustBlock": false
+      }
+    },
+    {
+      "id": "R-BASIS-004",
+      "type": "envelop",
+      "description": "Werkelijke diepte boven 15 m wordt geregistreerd maar DCIEM-luchtberekening blokkeert.",
+      "input": {
+        "breathingGas": "ademlucht",
+        "actualMaxDepthM": 16.4
+      },
+      "expected": {
+        "calculationStatus": "RED",
+        "mustBlock": true,
+        "blockingReason": "OUTSIDE_DEPTH_ENVELOPE"
+      }
+    },
+    {
+      "id": "R-BASIS-005",
+      "type": "ademgas",
+      "description": "Nitrox mag niet als geldige DCIEM-luchtberekening worden gepresenteerd.",
+      "input": {
+        "breathingGas": "nitrox",
+        "actualMaxDepthM": 9,
+        "bottomTimeMin": 20
+      },
+      "expected": {
+        "calculationStatus": "BLOCKED",
+        "mustBlock": true,
+        "blockingReason": "UNSUPPORTED_BREATHING_GAS"
+      }
+    },
+    {
+      "id": "R-BASIS-006",
+      "type": "meterregel",
+      "description": "6-meterregel: opgetelde duiktijd boven 420 minuten blokkeert. Cumulatieve grens, geen tabelgrens voor een afzonderlijke duik.",
+      "bron": "Landelijke Werkinstructie WOD v2.0 (03-12-2024), par. 11.5.1",
+      "input": {
+        "breathingGas": "ademlucht",
+        "meterRuleM": 6,
+        "summedDiveTimeMin": 421,
+        "startRepetitiveFactor": 1.0
+      },
+      "expected": {
+        "calculationStatus": "RED",
+        "mustBlock": true,
+        "blockingReason": "BOTTOM_TIME_EXCEEDS_METER_RULE"
+      }
+    },
+    {
+      "id": "R-BASIS-007",
+      "type": "meterregel",
+      "description": "6-meterregel: opgetelde duiktijd van precies 420 minuten blokkeert niet op meterregelgrond; HG via airtabel 1.",
+      "bron": "Landelijke Werkinstructie WOD v2.0 (03-12-2024), par. 11.5.1",
+      "input": {
+        "breathingGas": "ademlucht",
+        "meterRuleM": 6,
+        "summedDiveTimeMin": 420,
+        "startRepetitiveFactor": 1.0
+      },
+      "expected": {
+        "repetitionGroup": "J",
+        "mustBlock": false
+      }
+    },
+    {
+      "id": "R-BASIS-008",
+      "type": "meterregel",
+      "description": "9-meterregel: opgetelde duiktijd boven 210 minuten blokkeert.",
+      "bron": "Landelijke Werkinstructie WOD v2.0 (03-12-2024), par. 11.5.1",
+      "input": {
+        "breathingGas": "ademlucht",
+        "meterRuleM": 9,
+        "summedDiveTimeMin": 211,
+        "startRepetitiveFactor": 1.0
+      },
+      "expected": {
+        "calculationStatus": "RED",
+        "mustBlock": true,
+        "blockingReason": "BOTTOM_TIME_EXCEEDS_METER_RULE"
+      }
+    },
+    {
+      "id": "R-BASIS-009",
+      "type": "envelop",
+      "description": "Tabelenvelop 6 m: duiktijd van 720 minuten is de laatste tabelcel (HG M) en blokkeert niet op envelopgrond.",
+      "bron": "IWOD 002 Decompressiemethoden (1 april 2019), par. 2300 luchttabel 1, rij MDD 6 m",
+      "input": {
+        "breathingGas": "ademlucht",
+        "mddM": 6,
+        "bottomTimeMin": 720,
+        "firstDive": true
+      },
+      "expected": {
+        "repetitionGroup": "M",
+        "mustBlock": false
+      }
+    },
+    {
+      "id": "R-BASIS-010",
+      "type": "envelop",
+      "description": "Tabelenvelop 6 m: duiktijd boven 720 minuten valt boven de hoogste tabelwaarde en blokkeert.",
+      "bron": "IWOD 002 Decompressiemethoden (1 april 2019), par. 2300 luchttabel 1, rij MDD 6 m",
+      "input": {
+        "breathingGas": "ademlucht",
+        "mddM": 6,
+        "bottomTimeMin": 721,
+        "firstDive": true
+      },
+      "expected": {
+        "calculationStatus": "RED",
+        "mustBlock": true,
+        "blockingReason": "BOTTOM_TIME_EXCEEDS_TABLE"
+      }
+    },
+    {
+      "id": "R-BASIS-011",
+      "type": "hg_aanpassing",
+      "description": "HG-aanpassing bij herhalingsduik: voorgaande HG D, HI korter dan 6 uur, uitgevoerde duik levert HG B; de geldende HG wordt E (voorgaande HG plus één letter).",
+      "bron": "Landelijke Werkinstructie WOD v2.0 (03-12-2024), par. 11.5.1; Brandweer Duiklogboek Deel 1 (jan. 2019), p. 32",
+      "input": {
+        "previousRepetitionGroup": "D",
+        "surfaceIntervalMin": 120,
+        "rawRepetitionGroup": "B"
+      },
+      "expected": {
+        "repetitionGroup": "E",
+        "mustBlock": false
+      }
+    }
+  ],
+  "name": "OSOD v0.1 publieke basistoetsen"
+}

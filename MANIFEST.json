@@ -1,0 +1,148 @@
+{
+  "name": "OSOD",
+  "version": "0.1",
+  "status": "publieke conceptversie",
+  "generatedAt": "2026-06-15T21:29:33.407Z",
+  "contents": [
+    {
+      "path": ".gitattributes",
+      "sizeBytes": 14,
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": "BRONNEN.md",
+      "sizeBytes": 7230,
+      "sha256": "a6e056c33ec72acc81602d2354b4f8f9edf49d1d869acc9fe43a5882d3630402"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sizeBytes": 8436,
+      "sha256": "e8eb50ee3f92cfaeecbc7674daff2a37e968c2eeca54376ea83ec486b2750f7d"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sizeBytes": 1376,
+      "sha256": "100424e2a01c2dc3d310333ea21a2ef0849d6c389250af1965833ffb3b2b8185"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "sizeBytes": 2419,
+      "sha256": "02d06f7e869aa7189aaeedfecd9caf32a230682bcc2702f0c476a28ba95b7a5d"
+    },
+    {
+      "path": "LICENSE",
+      "sizeBytes": 2061,
+      "sha256": "145cbd7c574f239f4353d10e0629fa72d6d1ec6122b2e0d6f3e55657041ec41e"
+    },
+    {
+      "path": "NOTICE.md",
+      "sizeBytes": 703,
+      "sha256": "294fe6985ef1ad375f1761ed4bc3774bcb4f7897dfa48294305b730f7ac693ab"
+    },
+    {
+      "path": "PUBLICATIE.md",
+      "sizeBytes": 1580,
+      "sha256": "c7bcd758c509c78ba55cc7deacd66dcd206431d09eb58a79d5aad5dcf80b7417"
+    },
+    {
+      "path": "README.md",
+      "sizeBytes": 5367,
+      "sha256": "13cefea2613b2e332a4b69922003375d4cb64bb09b7d8d2db329d16f2a3efd05"
+    },
+    {
+      "path": "SECURITY.md",
+      "sizeBytes": 1632,
+      "sha256": "b96d21523e1e0bbb7d1b75ea972c38bb630c0ead8c8daf30d8b9043273cd66e2"
+    },
+    {
+      "path": "STANDAARD.md",
+      "sizeBytes": 12470,
+      "sha256": "ea09d5ec6885287649a6a7952c40eeec56da4d038651fa40d1a8c4cd1383d5e9"
+    },
+    {
+      "path": "conformiteit/README.md",
+      "sizeBytes": 1899,
+      "sha256": "ac2f1b4dd48896b48a64ca21d3d1c9d84c4d7fc182492f5b22bdcf2e94c0848f"
+    },
+    {
+      "path": "conformiteit/toetsvectoren/basistoetsen-v0.1.json",
+      "sizeBytes": 5482,
+      "sha256": "98fc2cb24a7339086e396f81300baeaaddb3a3c2d1715c098ad647b2e801f2d2"
+    },
+    {
+      "path": "implementatie/README.md",
+      "sizeBytes": 1308,
+      "sha256": "cc07b9717b6d1355d4d253601b95ae5f650ae0562b23f4821ab122b3df94635f"
+    },
+    {
+      "path": "implementatie/duikmonitor-architectuurschets.md",
+      "sizeBytes": 5479,
+      "sha256": "594e2bc8c1cdff64a9fe7d26e077a6b4f5d62a7cb2818c96798a157c1197ac6e"
+    },
+    {
+      "path": "implementatie/duikmonitor-conformiteit.md",
+      "sizeBytes": 1325,
+      "sha256": "e04a63ba3cc3d3e1b2de485d466a861c2339edc795a1e38ac2625abee7b36a36"
+    },
+    {
+      "path": "implementatie/duikmonitor-mapping.md",
+      "sizeBytes": 1605,
+      "sha256": "5ec70df7f5806ca7f72d9045530f4278f68c8aa37e2966c573ca3de7b28ef48e"
+    },
+    {
+      "path": "rekencontract/README.md",
+      "sizeBytes": 8516,
+      "sha256": "923407eb0a5374954e0019a8ddbd726ac33ad6cded987bfd5b8472fcf4d2f376"
+    },
+    {
+      "path": "schema/README.md",
+      "sizeBytes": 14295,
+      "sha256": "06903a3336a7ed370c28c7f4fcc64eeac8e896aa1b7d76243995117ad9a1a5ca"
+    },
+    {
+      "path": "schema/osod-logbook-record.schema.json",
+      "sizeBytes": 13253,
+      "sha256": "9483a3b3355957f65617195581264a60b74f0b65d7c0b9c29f0bf28bd9bd61cc"
+    },
+    {
+      "path": "voorbeelden/README.md",
+      "sizeBytes": 1064,
+      "sha256": "8f49621828abd6896d455d861f5a11b496427c5b04d7603a1ddf2165f4f7af44"
+    },
+    {
+      "path": "voorbeelden/geldig/diepteoverschrijding-geblokkeerd.json",
+      "sizeBytes": 2527,
+      "sha256": "f0a4a19b0c8149ac47cb32405c874c3f4f26e3639b13a6483d53da88ae028f9a"
+    },
+    {
+      "path": "voorbeelden/geldig/meterregel-geblokkeerd.json",
+      "sizeBytes": 2585,
+      "sha256": "679257ce5cd1858336abaee5a4ac4fb3d28b9da8e1a01498db53610b68501826"
+    },
+    {
+      "path": "voorbeelden/geldig/minimal-oefening.json",
+      "sizeBytes": 1861,
+      "sha256": "fb765ec29ba320fea77eba0a1aa97fd064d4b2715a031c435ce32638133b0c3c"
+    },
+    {
+      "path": "voorbeelden/ongeldig/groen-met-blokkeerreden.json",
+      "sizeBytes": 2492,
+      "sha256": "5e4e529e6cee5842c981e65e232c4d78940598b57503352d3c679791f5cee18e"
+    },
+    {
+      "path": "voorbeelden/ongeldig/ontbrekende-duikploegleider.json",
+      "sizeBytes": 1708,
+      "sha256": "4f686722871b9f7de355566630b376d284967c80661855052012669de032f8b8"
+    },
+    {
+      "path": "voorbeelden/ongeldig/r-claim-zonder-berekening.json",
+      "sizeBytes": 1847,
+      "sha256": "2aa1d167e786b30fd78e2cb9ec8cbcea324092d332e3c1666e214624a1c3de5a"
+    },
+    {
+      "path": "voorbeelden/ongeldig/red-zonder-blokkeerreden.json",
+      "sizeBytes": 2460,
+      "sha256": "e4a5f90b27db2b5f1491972c3bbf954fcc5cfac8dda7d0f78cc8d1275c6c3fe9"
+    }
+  ]
+}
