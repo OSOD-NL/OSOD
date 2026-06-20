@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1: publieke conceptversie, aanscherping juni 2026
+## 0.1, eerste publieke conceptversie (juni 2026)
 
-Aanscherping vóór eerste publicatie. De versie blijft 0.1.
+Eerste publieke conceptversie van OSOD. Hieronder staat wat deze versie bevat en welke aanscherpingen vóór publicatie zijn doorgevoerd.
 
 **VEILIGHEIDSWIJZIGING: statussemantiek eenduidig gemaakt.** De ongedefinieerde statusterm `NOT_APPLICABLE` stond in het rekencontract (sectie 2) en een gelijkwaardige formulering in `STANDAARD.md` (sectie 5.2), terwijl het statusmodel en toetsvector R-BASIS-005 `BLOCKED` voorschrijven. Beide passages verwijzen nu eenduidig naar blokkeren met status `BLOCKED`. Het statusmodel zelf is ongewijzigd.
 
@@ -18,8 +18,8 @@ Aanscherping vóór eerste publicatie. De versie blijft 0.1.
 
 Overig:
 
-- Redactioneel: het subkopje met de waarden van `dive.duiksysteem` in `schema/README.md` genummerd als 6.1, conform de bestaande subkopnummering. Geen inhoudelijke wijziging; de standaardversie blijft 0.1.
-- Schemawijziging (besluit B-0018): de losse duiksysteemwaarde `OLV` vervalt uit `dive.duiksysteem`; de toegestane waarden zijn `SCUBA`, `SCUBA_OLV`, `SSE`, `anders` en `onbekend`, elk voorzien van een bronherleide definitie in `schema/README.md`, sectie 6. Een registratie die elders de kale aanduiding OLV gebruikt, wordt in OSOD vastgelegd als `SCUBA_OLV`. De standaardversie blijft 0.1.
+- Redactioneel: het subkopje met de waarden van `dive.duiksysteem` in `schema/README.md` genummerd als 6.1, conform de bestaande subkopnummering. Geen inhoudelijke wijziging.
+- Schemawijziging (besluit B-0018): de losse duiksysteemwaarde `OLV` vervalt uit `dive.duiksysteem`; de toegestane waarden zijn `SCUBA`, `SCUBA_OLV`, `SSE`, `anders` en `onbekend`, elk voorzien van een bronherleide definitie in `schema/README.md`, sectie 6. Een registratie die elders de kale aanduiding OLV gebruikt, wordt in OSOD vastgelegd als `SCUBA_OLV`.
 - Voorbeeldcorrectie: in `voorbeelden/geldig/meterregel-geblokkeerd.json` stond een rekenmelding in `dive.bijzondereSessies`; dat veld registreert sessievormen. Het veld is nu leeg; de melding staat in `calculation.messages`.
 - Typografie geharmoniseerd: em-dashes in koppen en opsommingen vervangen door dubbele punt of komma. Geen inhoudelijke wijziging.
 - Bronverantwoording uitgebreid met verificatiestatus van de rekenbrongrenzen en bijbehorende open punten.
@@ -35,11 +35,9 @@ Overig:
 - Bronlijn defensie vastgelegd: IWOD per 1 januari 2023 binnen Defensie vervangen door de Instructie Duikarbeid Defensie (Kamerstukken 35925-X nr. 93 en 36360-X nr. 1); de brandweerketen verwijst nog naar IWOD 1 april 2019 en OSOD volgt de brandweerketen, met wakend open punt.
 - Formuliertracering naar het Brandweer Duiklogboek toegevoegd voor de operationele logbladen van Deel 2 (Duiklog Duiker) en Deel 3 (Duiklog Duikploegleider), op veldniveau en zonder reproductie van de beschermde uitgave. De uitgave (geheel herziene uitgave januari 2019) hanteert tabelopbouw conform IWOD, 1 april 2019. Editiegegevens vastgelegd in de bronlijst; bijbehorende open punten bijgewerkt.
 
-## 0.1: publieke conceptversie
+### Uitgangspunten en publicatiekeuzes
 
-Deze versie is gebaseerd op de interne OSOD v0.1 en aangescherpt tot eerste publieke conceptversie. De versie blijft bewust 0.1.
-
-Belangrijkste aanpassingen:
+Deze versie kent de volgende uitgangspunten en publicatiekeuzes:
 
 - Bronhiërarchie expliciet gemaakt.
 - Duikmonitor gepositioneerd als beoogde eerste referentie-implementatie, niet als normbron.
@@ -55,7 +53,7 @@ Belangrijkste aanpassingen:
 - Governance-, bijdrage-, veiligheids-, bronnen- en licentiedocumenten toegevoegd.
 - Eerste JSON Schema en voorbeeldrecords toegevoegd.
 
-## 0.1: interne werkversie
+### Eerste bouwstenen
 
 - Eerste standaardtekst met vier pijlers.
 - Eerste schema- en conformiteitsuitwerking.

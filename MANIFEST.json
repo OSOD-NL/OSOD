@@ -2,7 +2,7 @@
   "name": "OSOD",
   "version": "0.1",
   "status": "publieke conceptversie",
-  "generatedAt": "2026-06-15T21:29:33.407Z",
+  "generatedAt": "2026-06-20T17:27:24.000Z",
   "contents": [
     {
       "path": ".gitattributes",
@@ -16,8 +16,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sizeBytes": 8436,
-      "sha256": "e8eb50ee3f92cfaeecbc7674daff2a37e968c2eeca54376ea83ec486b2750f7d"
+      "sizeBytes": 8356,
+      "sha256": "9a9860dd3e36317e67e5098832859b3c320f61612ac5ca3c0cc21615b868898b"
     },
     {
       "path": "CONTRIBUTING.md",
