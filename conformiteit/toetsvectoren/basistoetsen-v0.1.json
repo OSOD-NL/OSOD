@@ -172,6 +172,24 @@
         "repetitionGroup": "E",
         "mustBlock": false
       }
+    },
+    {
+      "id": "R-BASIS-012",
+      "type": "kort_oppervlakte_interval",
+      "description": "Herhalingsduik gepland met een oppervlakte-interval korter dan 15 minuten (gecombineerde duik): tabel 4a is niet van toepassing en de herhalingsgroep van de korte-OI-duik geldt niet als ketenwaarde; de uitkomst is geblokkeerd met EMPTY_TABLE_CELL, tenzij een implementatie de gecombineerde duik volgens de bron berekent (methode in v0.1 nog niet bronvast; zie rekencontract).",
+      "bron": "Landelijke Werkinstructie WOD v2.0 (03-12-2024), begrippenlijst onder par. 11.5 en par. 11.5.3; IWOD 002 (1 april 2019), par. 2300",
+      "input": {
+        "previousRepetitionGroup": "C",
+        "surfaceIntervalMin": 10,
+        "mddM": 12,
+        "bottomTimeMin": 20,
+        "breathingGas": "ademlucht"
+      },
+      "expected": {
+        "calculationStatus": "BLOCKED",
+        "mustBlock": true,
+        "blockingReason": "EMPTY_TABLE_CELL"
+      }
     }
   ],
   "name": "OSOD v0.1 publieke basistoetsen"

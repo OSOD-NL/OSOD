@@ -196,6 +196,10 @@ De meterregels voor 6, 9 en 12 m uit de Landelijke Werkinstructie WOD v2.0, para
 
 De HG-aanpassing bij verscheidene herhalingsduiken uit de Landelijke Werkinstructie WOD v2.0, paragraaf 11.5.1, is normatief voor Niveau R: bij een oppervlakte-interval van 6 uur of korter en een nieuwe herhalingsgroep die lager dan of gelijk aan de voorgaande is, geldt de voorgaande herhalingsgroep plus één letter. De beslisregels en het bronvoorbeeld staan in `rekencontract/README.md`.
 
+### 5.9 Kort oppervlakte-interval en gecombineerde duik
+
+Een gecombineerde duik is een samenstel van twee of drie duiken waartussen het herhalingsinterval (HI, oppervlakte-interval) korter is dan 15 minuten, of een herhalingsduik waarvan de herhalingsfactor (HF) groter is dan 2.0. Bij een oppervlakte-interval korter dan 15 minuten MOET een rekenende implementatie tabel 4a NIET toepassen en MOET zij de herhalingsgroep die uit alleen de eigen duiktijd van die duik volgt NIET als ketenwaarde voor een volgende herhalingsduik gebruiken. Conform zijn twee invullingen: (1) het samenstel als gecombineerde duik berekenen voor zover de bron de methode dekt, of (2) het vervolgresultaat markeren als niet-berekend of geblokkeerd met vastgelegde reden: `EMPTY_TABLE_CELL`, status `BLOCKED`. De bronnen, de bronvaste samenstel-elementen en het open bronpunt staan in `rekencontract/README.md`.
+
 ## 6. Pijler 3: Conformiteit
 
 Een implementatie MOET haar conformiteitsclaim expliciet maken:

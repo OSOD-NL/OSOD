@@ -2,7 +2,7 @@
   "name": "OSOD",
   "version": "0.1",
   "status": "publieke conceptversie",
-  "generatedAt": "2026-06-20T17:27:24.000Z",
+  "generatedAt": "2026-07-02T22:44:43.000Z",
   "contents": [
     {
       "path": ".gitattributes",
@@ -11,13 +11,13 @@
     },
     {
       "path": "BRONNEN.md",
-      "sizeBytes": 7230,
-      "sha256": "a6e056c33ec72acc81602d2354b4f8f9edf49d1d869acc9fe43a5882d3630402"
+      "sizeBytes": 7541,
+      "sha256": "b1db6c486c9190c648b013fdf3ac92b57e9772724160c8531c90c36527dd7c58"
     },
     {
       "path": "CHANGELOG.md",
-      "sizeBytes": 8356,
-      "sha256": "9a9860dd3e36317e67e5098832859b3c320f61612ac5ca3c0cc21615b868898b"
+      "sizeBytes": 9010,
+      "sha256": "e8566dc53aba9d224ffc25c0117e1a93ba901cb6980eacfcceeee87a6bed9ef6"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "STANDAARD.md",
-      "sizeBytes": 12470,
-      "sha256": "ea09d5ec6885287649a6a7952c40eeec56da4d038651fa40d1a8c4cd1383d5e9"
+      "sizeBytes": 13360,
+      "sha256": "16f0d80080b8282b842338e3d9264962c833465df0169db5045d06abe8dd7741"
     },
     {
       "path": "conformiteit/README.md",
@@ -66,8 +66,8 @@
     },
     {
       "path": "conformiteit/toetsvectoren/basistoetsen-v0.1.json",
-      "sizeBytes": 5482,
-      "sha256": "98fc2cb24a7339086e396f81300baeaaddb3a3c2d1715c098ad647b2e801f2d2"
+      "sizeBytes": 6438,
+      "sha256": "64297496c61f4e90f7a6364478960a36a918e14150e3197cc4e2875d2fe8c3fc"
     },
     {
       "path": "implementatie/README.md",
@@ -91,8 +91,8 @@
     },
     {
       "path": "rekencontract/README.md",
-      "sizeBytes": 8516,
-      "sha256": "923407eb0a5374954e0019a8ddbd726ac33ad6cded987bfd5b8472fcf4d2f376"
+      "sizeBytes": 11298,
+      "sha256": "e4a412310471b1646d49fd2edd24d7cd645d0af0e140627deeb08f771a748f0a"
     },
     {
       "path": "schema/README.md",

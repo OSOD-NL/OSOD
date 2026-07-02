@@ -87,7 +87,7 @@ Een implementatie die Niveau R claimt, MOET blokkeren bij onder meer:
 |---|---|---|
 | `OUTSIDE_DEPTH_ENVELOPE` | Werkelijke diepte buiten de DCIEM-/brandweer-envelop voor de berekening. | `RED` of `BLOCKED` |
 | `UNSUPPORTED_BREATHING_GAS` | Ademgas is niet `ademlucht`. | `BLOCKED` |
-| `EMPTY_TABLE_CELL` | Benodigde tabelcel is leeg of uitgesloten. | `BLOCKED` |
+| `EMPTY_TABLE_CELL` | Benodigde tabelcel is leeg of uitgesloten, waaronder een herhalingsfactor boven 2.0 (lege cel in tabel 4a) en een oppervlakte-interval onder het tabel 4a-domein (korter dan 15 minuten). | `BLOCKED` |
 | `BOTTOM_TIME_EXCEEDS_TABLE` | Bodemtijd valt boven hoogste toegestane tabelwaarde. | `RED` of `BLOCKED` |
 | `BOTTOM_TIME_EXCEEDS_METER_RULE` | Opgetelde duiktijd onder een meterregel overschrijdt het brongedekte maximum (par. 11.5.1 Werkinstructie WOD). | `RED` of `BLOCKED` |
 | `SOURCE_FINGERPRINT_MISMATCH` | Rekenbron komt niet overeen met de verwachte fingerprint. | `BLOCKED` |
@@ -129,10 +129,25 @@ In OSOD v0.1 zijn alleen de expliciet bron-gedekte 6 m- en 9 m-categorieën voor
 
 Bronbevinding: de Landelijke Werkinstructie WOD v2.0 kondigt onder paragraaf 11.5.1 een tabel aan met maximale aantallen afdalingen en opstijgingen per dagdeel, maar die tabel ontbreekt in de uitgave. De aantallen volgen daarom uit het DMC-advies als primaire bron.
 
-## 10. Open punten
+## 10. Kort oppervlakte-interval en gecombineerde duik
+
+Definitie en bron: Een gecombineerde duik is een samenstel van twee of drie duiken waartussen het herhalingsinterval (HI, oppervlakte-interval) korter is dan 15 minuten, of een herhalingsduik waarvan de herhalingsfactor (HF) groter is dan 2.0. De meterregels van sectie 4 zijn hierop de uitzondering. Bron: Landelijke Werkinstructie WOD v2.0 (03-12-2024), begrippenlijst direct onder paragraaf 11.5; de procedures en de meterregel-uitzondering staan in paragraaf 11.5.1.
+
+Tabeldomein: Tabel 4a definieert herhalingsfactoren voor herhalingsintervallen van 15 minuten tot en met 18 uur. Onder de 15 minuten bestaat geen tabelwaarde. Bron: Werkinstructie WOD v2.0, paragraaf 11.5.3; IWOD 002 (1 april 2019), paragraaf 2300 (tabelbron).
+
+Verbodsnorm: Bij een oppervlakte-interval korter dan 15 minuten MOET een rekenende implementatie tabel 4a NIET toepassen en MOET zij de herhalingsgroep die uit alleen de eigen duiktijd van die duik volgt NIET als ketenwaarde voor een volgende herhalingsduik gebruiken.
+
+De twee conforme invullingen: (1) het samenstel als gecombineerde duik berekenen voor zover de bron de methode dekt, of (2) het vervolgresultaat markeren als niet-berekend of geblokkeerd met vastgelegde reden: `EMPTY_TABLE_CELL`, status `BLOCKED`. Een implementatie MAG daarbij om handmatige beoordeling vragen; dat is een geldige invulling van (2), geen norm.
+
+Bronvaste samenstel-elementen: De effectieve duiktijd (EDT) van een gecombineerde duik is de som van de effectieve duiktijd van de eerste duik en de duiktijd van de tweede en eventueel de derde duik. Is de eerste duik zelf een herhalingsduik, dan telt zijn effectieve duiktijd (duiktijd maal herhalingsfactor). Een samenstel omvat maximaal drie duiken. Bron: dezelfde begrippenlijst.
+
+Noot, open bronpunt: de dieptekeuze voor het samenstel, de tabelafhandeling met de gesommeerde EDT boven de meterregels en de instap wanneer de trigger HF groter dan 2,0 is, zijn niet bronvast aangetroffen. Invulling (1) is daarom pas volledig specificeerbaar wanneer de ontbrekende bron beschikbaar is; tot die tijd is invulling (2) de enige volledig gespecificeerde route. Zie het open punt in sectie 11.
+
+## 11. Open punten
 
 1. Volledige machineleesbare toetsset vaststellen.
 2. Publicatierechten voor volledige tabelwaarden vaststellen.
 3. Definitief besluit nemen over normatieve status van opstijgingsregels dieper dan 9 m.
 4. Definitieve fout-/statuscodecatalogus uitbreiden.
 5. Normatieve status bepalen van de overige bepalingen van Werkinstructie WOD paragraaf 11.5.1: terugvalregels tussen meterregels, maximum van 3 duiken bij duiken dieper dan 12 m en de procedure bij niet-geplande diepteoverschrijding.
+6. Onderzoeksvraag gecombineerde duik: bevat de IWOD 002-proza zelf een gecombineerde-duik-procedure voor dit bereik. Zolang dat niet is vastgesteld blijven de dieptekeuze voor het samenstel, de tabelafhandeling met de gesommeerde EDT boven de meterregels en de instap bij HF groter dan 2.0 open; een latere restauratie van een rekenprocedure neemt de voorwaarden en uitsluitingen van de dan beslissende bron integraal mee.

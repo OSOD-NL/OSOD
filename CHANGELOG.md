@@ -4,6 +4,8 @@
 
 Eerste publieke conceptversie van OSOD. Hieronder staat wat deze versie bevat en welke aanscherpingen vóór publicatie zijn doorgevoerd.
 
+**VEILIGHEIDSWIJZIGING: kort oppervlakte-interval en gecombineerde duik genormeerd.** Governancebesluit van de beheerder: bij een oppervlakte-interval korter dan 15 minuten (gecombineerde duik) geldt een verbodsnorm met twee conforme invullingen; tabel 4a wordt niet toegepast en de herhalingsgroep van die duik geldt niet als ketenwaarde. De situatie-omschrijving van blokkeercode `EMPTY_TABLE_CELL` is verduidelijkt en nieuwe toetsvector `R-BASIS-012` legt het ketengedrag na een korte OI vast. Het open bronpunt over de rekenmethode van de gecombineerde duik is geregistreerd. Zie `rekencontract/README.md`, sectie 10, en `STANDAARD.md`, sectie 5.9.
+
 **VEILIGHEIDSWIJZIGING: statussemantiek eenduidig gemaakt.** De ongedefinieerde statusterm `NOT_APPLICABLE` stond in het rekencontract (sectie 2) en een gelijkwaardige formulering in `STANDAARD.md` (sectie 5.2), terwijl het statusmodel en toetsvector R-BASIS-005 `BLOCKED` voorschrijven. Beide passages verwijzen nu eenduidig naar blokkeren met status `BLOCKED`. Het statusmodel zelf is ongewijzigd.
 
 **VEILIGHEIDSWIJZIGING: meterregels normatief opgenomen.** Governancebesluit van de beheerder: de meterregels voor 6, 9 en 12 m uit de Landelijke Werkinstructie WOD v2.0, paragraaf 11.5.1, zijn normatief onderdeel van het rekencontract (Niveau R). De blokkeercode `BOTTOM_TIME_EXCEEDS_METER_RULE` is gedefinieerd in de normatieve codecatalogus. Het rekencontract omvat hiermee naast enkelduikberekening ook cumulatieve duiktijdbewaking. Zie `rekencontract/README.md`, sectie 4, en `STANDAARD.md`, sectie 5.7.
