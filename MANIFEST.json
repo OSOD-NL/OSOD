@@ -2,7 +2,7 @@
   "name": "OSOD",
   "version": "0.1",
   "status": "publieke conceptversie",
-  "generatedAt": "2026-07-02T22:44:43.000Z",
+  "generatedAt": "2026-07-05T19:12:48.000Z",
   "contents": [
     {
       "path": ".gitattributes",
@@ -16,8 +16,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sizeBytes": 9010,
-      "sha256": "e8566dc53aba9d224ffc25c0117e1a93ba901cb6980eacfcceeee87a6bed9ef6"
+      "sizeBytes": 9749,
+      "sha256": "8c40923964f93367a85c6ee36035e7acc3fb507ea1e98da58be5b63f8fa28e99"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "STANDAARD.md",
-      "sizeBytes": 13360,
-      "sha256": "16f0d80080b8282b842338e3d9264962c833465df0169db5045d06abe8dd7741"
+      "sizeBytes": 13700,
+      "sha256": "465cb5bdb46bdbb534591deb4f8bbcae3c8e9ddb144a712ff0eb96071caaa26a"
     },
     {
       "path": "conformiteit/README.md",
@@ -91,8 +91,8 @@
     },
     {
       "path": "rekencontract/README.md",
-      "sizeBytes": 11298,
-      "sha256": "e4a412310471b1646d49fd2edd24d7cd645d0af0e140627deeb08f771a748f0a"
+      "sizeBytes": 13221,
+      "sha256": "489ae4cc02f81c55be308c9fdc0c78b9f4682f52eee00f0a9684f71b62ed7a59"
     },
     {
       "path": "schema/README.md",
